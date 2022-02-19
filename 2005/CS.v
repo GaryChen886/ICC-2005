@@ -28,7 +28,7 @@ module CS(Y, X, reset, clk);
             for(i = 9;i > 2;i = i - 1)
                 XS[i] <= XS[i-1];
             XS[1] <= X;
-            sum <= sum - XS[11] + X;
+            sum <= sum - XS[9] + X;
         end
     end
     always @(*)begin
