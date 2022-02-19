@@ -11,8 +11,7 @@ module CS(Y, X, reset, clk);
     integer i, j;
     reg [7:0] XS [9:1] ;   //8bits * 9
     reg [12:0] sum;
-    reg [7:0] avg;
-    reg [7:0] appr;
+    reg [7:0] avg,appr;
     reg [3:0] cnt;
     
     always @(posedge clk or posedge reset)begin
