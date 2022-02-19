@@ -39,5 +39,4 @@ module CS(Y, X, reset, clk);
 		end
 		Y = (sum + (appr*9))/8;
 	end
-
 endmodule
