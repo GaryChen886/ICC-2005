@@ -32,7 +32,7 @@ module CS(Y, X, reset, clk);
         end
     end
     always @(*)begin
-        avg = sum / 12;
+        avg = sum / 9;
         appr = XS[1];
         for(j = 2; j <= 9;j = j + 1)begin
             if( `abs(avg,XS[j])<`abs(avg,appr) )
