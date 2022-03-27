@@ -18,7 +18,6 @@ module CS(Y, X, reset, clk);
 				XS[i] <= 0;
 			end
 			sum <= 0;
-			i <= 0;
 		end
 		else begin
 			sum <= sum - XS[0] + X;
@@ -37,6 +36,6 @@ module CS(Y, X, reset, clk);
 				appr = XS[k];
 			end
 		end
-		Y = (sum + (appr*9))/8;
+		Y = (sum + (appr>>9 + appr))>>3;
 	end
 endmodule
